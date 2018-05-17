@@ -9,4 +9,4 @@
         <button type="submit" class="btn btn-sm btn-danger delete-btn">删除</button>
       </form>
     @endcan
-</li> 
+</li>
