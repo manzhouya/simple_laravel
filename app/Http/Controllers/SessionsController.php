@@ -25,7 +25,10 @@ class SessionsController extends Controller
     {
         $credentials = $this->validate($request, [
             'email' => 'required|email|max:255',
-            'password' => 'required'
+            'password' => 'required',
+            'geetest_challenge' => 'geetest',
+        ], [
+            'geetest' => config('geetest.server_fail_alert')
         ]);
 
         if (Auth::attempt($credentials, $request->has('remember'))) {
